@@ -14,6 +14,7 @@
 		D38E89981A21436400A918AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38E89971A21436400A918AB /* Images.xcassets */; };
 		D38E899B1A21436400A918AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38E89991A21436400A918AB /* LaunchScreen.xib */; };
 		D38E89A71A21436500A918AB /* SecureChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D38E89A61A21436500A918AB /* SecureChatTests.m */; };
+		D39852A41A227DF4003D808A /* libCryptLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D39852A11A227DD6003D808A /* libCryptLib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,6 +24,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = D38E89861A21436400A918AB;
 			remoteInfo = SecureChat;
+		};
+		D39852A01A227DD6003D808A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D398529B1A227DD6003D808A /* CryptLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D3A1F3E71A20F03300C25F2C;
+			remoteInfo = CryptLib;
+		};
+		D39852A21A227DD6003D808A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D398529B1A227DD6003D808A /* CryptLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D3A1F3F21A20F03300C25F2C;
+			remoteInfo = CryptLibTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -40,6 +55,7 @@
 		D38E89A01A21436500A918AB /* SecureChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecureChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38E89A51A21436500A918AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D38E89A61A21436500A918AB /* SecureChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecureChatTests.m; sourceTree = "<group>"; };
+		D398529B1A227DD6003D808A /* CryptLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptLib.xcodeproj; path = OpenNet/auth/Apple/CryptLib/CryptLib.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D39852A41A227DF4003D808A /* libCryptLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +80,7 @@
 		D38E897E1A21436400A918AB = {
 			isa = PBXGroup;
 			children = (
+				D398529B1A227DD6003D808A /* CryptLib.xcodeproj */,
 				D38E89891A21436400A918AB /* SecureChat */,
 				D38E89A31A21436500A918AB /* SecureChatTests */,
 				D38E89881A21436400A918AB /* Products */,
@@ -117,6 +135,15 @@
 				D38E89A51A21436500A918AB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D398529C1A227DD6003D808A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D39852A11A227DD6003D808A /* libCryptLib.a */,
+				D39852A31A227DD6003D808A /* CryptLibTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +214,12 @@
 			mainGroup = D38E897E1A21436400A918AB;
 			productRefGroup = D38E89881A21436400A918AB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D398529C1A227DD6003D808A /* Products */;
+					ProjectRef = D398529B1A227DD6003D808A /* CryptLib.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D38E89861A21436400A918AB /* SecureChat */,
@@ -194,6 +227,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D39852A11A227DD6003D808A /* libCryptLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libCryptLib.a;
+			remoteRef = D39852A01A227DD6003D808A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D39852A31A227DD6003D808A /* CryptLibTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = CryptLibTests.xctest;
+			remoteRef = D39852A21A227DD6003D808A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D38E89851A21436400A918AB /* Resources */ = {
@@ -346,8 +396,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../OpenNet/auth/Apple/CryptLib/CryptLib/,
+				);
 				INFOPLIST_FILE = SecureChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenNet/auth/Apple/OpenSSL",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -356,8 +415,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../../OpenNet/auth/Apple/CryptLib/CryptLib/,
+				);
 				INFOPLIST_FILE = SecureChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OpenNet/auth/Apple/OpenSSL",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -415,6 +483,7 @@
 				D38E89AC1A21436500A918AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D38E89AD1A21436500A918AB /* Build configuration list for PBXNativeTarget "SecureChatTests" */ = {
 			isa = XCConfigurationList;
@@ -423,6 +492,7 @@
 				D38E89AF1A21436500A918AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
