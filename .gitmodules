@@ -1,0 +1,3 @@
+[submodule "SecureChat/OpenNet"]
+	path = SecureChat/OpenNet
+	url = git@github.com:IDWMaster/OpenNet.git
