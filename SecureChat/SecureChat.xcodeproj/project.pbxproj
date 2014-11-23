@@ -14,6 +14,7 @@
 		D38E89981A21436400A918AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38E89971A21436400A918AB /* Images.xcassets */; };
 		D38E899B1A21436400A918AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38E89991A21436400A918AB /* LaunchScreen.xib */; };
 		D38E89A71A21436500A918AB /* SecureChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D38E89A61A21436500A918AB /* SecureChatTests.m */; };
+		D390833C1A2299D7001E5DB1 /* libEasyApple.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D39083391A22992C001E5DB1 /* libEasyApple.a */; };
 		D39852A41A227DF4003D808A /* libCryptLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D39852A11A227DD6003D808A /* libCryptLib.a */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +25,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = D38E89861A21436400A918AB;
 			remoteInfo = SecureChat;
+		};
+		D39083381A22992C001E5DB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D39083321A22992C001E5DB1 /* EasyApple.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D30F35EB1A22955200B66521;
+			remoteInfo = EasyApple;
+		};
+		D390833A1A22992C001E5DB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D39083321A22992C001E5DB1 /* EasyApple.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D30F35F61A22955200B66521;
+			remoteInfo = EasyAppleTests;
+		};
+		D390833D1A2299FF001E5DB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D39083321A22992C001E5DB1 /* EasyApple.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D30F35EA1A22955200B66521;
+			remoteInfo = EasyApple;
 		};
 		D39852A01A227DD6003D808A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -62,6 +84,7 @@
 		D38E89A01A21436500A918AB /* SecureChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SecureChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D38E89A51A21436500A918AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D38E89A61A21436500A918AB /* SecureChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecureChatTests.m; sourceTree = "<group>"; };
+		D39083321A22992C001E5DB1 /* EasyApple.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EasyApple.xcodeproj; path = EasyApple/EasyApple.xcodeproj; sourceTree = "<group>"; };
 		D398529B1A227DD6003D808A /* CryptLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CryptLib.xcodeproj; path = OpenNet/auth/Apple/CryptLib/CryptLib.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D390833C1A2299D7001E5DB1 /* libEasyApple.a in Frameworks */,
 				D39852A41A227DF4003D808A /* libCryptLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +111,7 @@
 		D38E897E1A21436400A918AB = {
 			isa = PBXGroup;
 			children = (
+				D39083321A22992C001E5DB1 /* EasyApple.xcodeproj */,
 				D398529B1A227DD6003D808A /* CryptLib.xcodeproj */,
 				D38E89891A21436400A918AB /* SecureChat */,
 				D38E89A31A21436500A918AB /* SecureChatTests */,
@@ -144,6 +169,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D39083331A22992C001E5DB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D39083391A22992C001E5DB1 /* libEasyApple.a */,
+				D390833B1A22992C001E5DB1 /* EasyAppleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D398529C1A227DD6003D808A /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +201,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D390833E1A2299FF001E5DB1 /* PBXTargetDependency */,
 				D3C82BEE1A228C9500877D4C /* PBXTargetDependency */,
 			);
 			name = SecureChat;
@@ -227,6 +262,10 @@
 					ProductGroup = D398529C1A227DD6003D808A /* Products */;
 					ProjectRef = D398529B1A227DD6003D808A /* CryptLib.xcodeproj */;
 				},
+				{
+					ProductGroup = D39083331A22992C001E5DB1 /* Products */;
+					ProjectRef = D39083321A22992C001E5DB1 /* EasyApple.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -237,6 +276,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		D39083391A22992C001E5DB1 /* libEasyApple.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libEasyApple.a;
+			remoteRef = D39083381A22992C001E5DB1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D390833B1A22992C001E5DB1 /* EasyAppleTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EasyAppleTests.xctest;
+			remoteRef = D390833A1A22992C001E5DB1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		D39852A11A227DD6003D808A /* libCryptLib.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -299,6 +352,11 @@
 			isa = PBXTargetDependency;
 			target = D38E89861A21436400A918AB /* SecureChat */;
 			targetProxy = D38E89A11A21436500A918AB /* PBXContainerItemProxy */;
+		};
+		D390833E1A2299FF001E5DB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = EasyApple;
+			targetProxy = D390833D1A2299FF001E5DB1 /* PBXContainerItemProxy */;
 		};
 		D3C82BEE1A228C9500877D4C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -423,6 +481,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					../../OpenNet/auth/Apple/CryptLib/CryptLib/,
+					EasyApple/EasyApple,
 				);
 				INFOPLIST_FILE = SecureChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -442,6 +501,7 @@
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					../../OpenNet/auth/Apple/CryptLib/CryptLib/,
+					EasyApple/EasyApple,
 				);
 				INFOPLIST_FILE = SecureChat/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
