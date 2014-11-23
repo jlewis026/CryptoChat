@@ -1,3 +1,6 @@
 [submodule "SecureChat/OpenNet"]
 	path = SecureChat/OpenNet
 	url = git@github.com:IDWMaster/OpenNet.git
+[submodule "SecureChat/EasyApple"]
+	path = SecureChat/EasyApple
+	url = git@github.com:IDWMaster/EasyApple.git
