@@ -39,6 +39,13 @@
 			remoteGlobalIDString = D3A1F3F21A20F03300C25F2C;
 			remoteInfo = CryptLibTests;
 		};
+		D3C82BED1A228C9500877D4C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D398529B1A227DD6003D808A /* CryptLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D3A1F3E61A20F03300C25F2C;
+			remoteInfo = CryptLib;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -160,6 +167,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D3C82BEE1A228C9500877D4C /* PBXTargetDependency */,
 			);
 			name = SecureChat;
 			productName = SecureChat;
@@ -292,6 +300,11 @@
 			target = D38E89861A21436400A918AB /* SecureChat */;
 			targetProxy = D38E89A11A21436500A918AB /* PBXContainerItemProxy */;
 		};
+		D3C82BEE1A228C9500877D4C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CryptLib;
+			targetProxy = D3C82BED1A228C9500877D4C /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -351,6 +364,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -386,6 +404,11 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+					"-lstdc++",
+				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
