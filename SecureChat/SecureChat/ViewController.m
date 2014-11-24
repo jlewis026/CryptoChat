@@ -33,11 +33,15 @@
 
 @end
 
+CryptLib* db;
+
 @implementation TrustView
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    CryptLib* crypt = [[CryptLib alloc] init];
+    if(db == nil) {
+    db = [[CryptLib alloc] init];
+    }
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
